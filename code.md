@@ -1,8 +1,8 @@
 ```cpp
 #include <iostream>
 #include <opencv2/imgcodecs.hpp>
-#include <opencv/imgproc.hpp>
-#include <opencv2/highhui.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
 
 
 using namespace std;
@@ -24,7 +24,7 @@ void getContours(Mat imgDil, Mat img){
      string objectType;
      for (int i =0; i < contours.size(); i++){
     
-         int area= contoursArea(contours[i]);
+         int area= contourArea(contours[i]);
          cout<<area <<endl;
          
          if (area>1000){
