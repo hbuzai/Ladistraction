@@ -41,7 +41,11 @@ void getContours(Mat imgDil, Mat img){
             if (objCor == 4){objectType = "Rectangle";}
             if (objCor == 5){objectType = "Pentagon";}
             if (objCor == 6){objectType = "Hexagon";}
-            if (objCor > 6){objectType = "Circle";}
+            if (objCor == 7){objectType = "Heptagon";}
+            if (objCor == 8){objectType = "Octagon";}
+            if (objCor == 9){objectType = "Nonagon";}
+            if (objCor == 10){objectType = "Star";}
+            if (objCor > 10){objectType = "Circle";}
 
 
             drawContours(img,contours,i,Scalar(255,0,255),2);
