@@ -36,10 +36,13 @@ void getContours(Mat imgDil, Mat img){
             
             int objCor = (int)conPoly[i].size();
 
-            if (objCor == 3){objectType = "Tri";}
-            if (objCor == 3){objectType = "Tri";}
-            if (objCor == 3){objectType = "Tri";}
-            if (objCor == 3){objectType = "Tri";}
+           //仅对于low
+            if (objCor == 3){objectType = "Triangle";}
+            if (objCor == 4){objectType = "Rectangle";}
+            if (objCor == 5){objectType = "Pentagon";}
+            if (objCor == 6){objectType = "Hexagon";}
+            if (objCor > 6){objectType = "Circle";}
+
 
             drawContours(img,contours,i,Scalar(255,0,255),2);
             rectangle(img,boundRect[i].tl(),boundRect[i].br(),Scalar(0,255,0),5);
